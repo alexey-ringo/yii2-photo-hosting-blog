@@ -16,7 +16,8 @@ return [
             'csrfParam' => '_csrf-frontend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            //'identityClass' => 'common\models\User',
+            'identityClass' => 'frontend\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
@@ -43,7 +44,7 @@ return [
             'rules' => [
             ],
         ],
-        
+        /*
         //добавил компонент
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
@@ -60,8 +61,8 @@ return [
                 ],
                 // etc.
             ],
-        ]
-        
+        ],
+        */
     ],
     'params' => $params,
 ];
