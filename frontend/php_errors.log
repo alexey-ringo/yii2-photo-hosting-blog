@@ -1,0 +1,11 @@
+[08-Nov-2018 21:49:36 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php on line 51
+[08-Nov-2018 21:49:36 UTC] PHP Stack trace:
+[08-Nov-2018 21:49:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[08-Nov-2018 21:49:36 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[08-Nov-2018 21:49:36 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[08-Nov-2018 21:49:36 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[08-Nov-2018 21:49:36 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:522
+[08-Nov-2018 21:49:36 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:596
+[08-Nov-2018 21:49:36 UTC] PHP   7. class_exists() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
+[08-Nov-2018 21:49:36 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
+[08-Nov-2018 21:49:36 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637

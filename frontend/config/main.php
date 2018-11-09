@@ -48,6 +48,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '/' => 'site/index',
+                //Передаем в экшен только строковый параметр 'nickname'
+                'profile/<nickname:\w+>' => 'user/profile/view',
             ],
         ],
         /*
