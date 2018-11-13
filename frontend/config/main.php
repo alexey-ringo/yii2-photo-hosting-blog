@@ -53,6 +53,13 @@ return [
                 'profile/<nickname:\w+>' => 'user/profile/view',
             ],
         ],
+        //Redis
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+        ],
         /*
         //добавил компонент
         'authClientCollection' => [

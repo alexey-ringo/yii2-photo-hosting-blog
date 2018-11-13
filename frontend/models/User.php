@@ -217,4 +217,99 @@ class User extends ActiveRecord implements IdentityInterface
         */
         return $this->nickname ? $this->nickname : $this->getId();
     }
+    
+    public function followUser(User $user) {
+        $redis = Yii::$app->redis;
+        
+        /*добавляем в список подписок текущего залогиненного пользователя, вызвавшего followUser(),
+        выбранного им пользователя $user, id которого было передано на вход метода */
+        $redis->sadd("user:{$this->getId()}:subscriptions", $user->getId());
+        
+        /*добавляем в список подписчиков пользователя $user, 
+        id которого было передано на вход метода,
+        текущего залогиненного пользователя, вызвавшего followUser() */
+        $redis->sadd("user:{$user->getId()}:followers", $this->getId());
+    }
+    
+     public function unfollowUser(User $user) {
+        $redis = Yii::$app->redis;
+        
+        /*удаляем из списка подписок текущего залогиненного пользователя, вызвавшего followUser(),
+        выбранного им пользователя $user, id которого было передано на вход метода */
+        $redis->srem("user:{$this->getId()}:subscriptions", $user->getId());
+        
+        /*удаляем из списка подписчиков пользователя $user, 
+        id которого было передано на вход метода,
+        текущего залогиненного пользователя, вызвавшего followUser() */
+        $redis->srem("user:{$user->getId()}:followers", $this->getId());
+    }
+    
+    //получить список подписок просматриваемого в progile/view пользователя 
+    public function getSubscriptions() {
+        /* @var redis Connection */
+        $redis = Yii::$app->redis;
+        $key = "user:{$this->getId()}:subscriptions";
+        //получаем из redis массив нужных id
+        $ids = $redis->smembers($key);
+        
+        return User::find()->select('id, username, nickname')->where(['id' => $ids])->orderBy('username')->asArray()->all();
+        
+    }
+    
+    public function getFollowers() {
+        /* @var redis Connection */
+        $redis = Yii::$app->redis;
+        $key = "user:{$this->getId()}:followers";
+        //получаем из redis массив нужных id
+        $ids = $redis->smembers($key);
+        
+        return User::find()->select('id, username, nickname')->where(['id' => $ids])->orderBy('username')->asArray()->all();
+    }
+    
+    public function countSubscriptions() {
+        /* @var redis Connection */
+        $redis = Yii::$app->redis;
+        return $redis->scard("user:{$this->getId()}:subscriptions");
+    }
+    
+    public function countFollowers() {
+        /* @var redis Connection */
+        $redis = Yii::$app->redis;
+        return $redis->scard("user:{$this->getId()}:followers");
+    }
+    
+    /**
+     * @param \frontend\models\User $user
+     */
+     
+    public function getMutualSubscriptionsTo(User $user) {
+        //Current user subscriptions
+        //Подписки текущего зарегистрированного пользователя
+        $key1 = "user:{$this->getId()}:subscriptions";
+        
+        //Given user followers
+        //Подписчики интересующего нас пользователя
+        $key1 = "user:{$user->getId()}:followers";
+        
+        /* @var redis Connection */
+        $redis = Yii::$app->redis;
+        
+        //Пересечения двух множеств
+        $ids = $redis->sinter($key1, $key2);
+        
+        return User::find()->select('id, username, nickname')->where(['id' => $ids])->orderBy('username')->asArray()->all();
+    }
+    
+    /**
+     * Check whether current user if following given user
+     * @param \frontend\models\User $user
+     * @return boolean
+     */
+    public function isFollowing(User $user)
+    {
+        /* @var $redis Connection */
+        $redis = Yii::$app->redis;
+        return (bool) $redis->sismember("user:{$this->getId()}:subscriptions", $user->getId());
+    }
+    
 }
