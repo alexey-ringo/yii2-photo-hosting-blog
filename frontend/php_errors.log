@@ -220,3 +220,23 @@ $_SERVER = [
 [13-Nov-2018 11:17:47 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
 [13-Nov-2018 11:17:47 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
 [13-Nov-2018 11:17:47 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[13-Nov-2018 22:15:16 UTC] PHP Fatal error:  Class 'frontend\modules\user\controllers\UploadedFile' not found in /home/ubuntu/workspace/instagram/frontend/modules/user/controllers/ProfileController.php on line 38
+[13-Nov-2018 22:15:16 UTC] PHP Stack trace:
+[13-Nov-2018 22:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[13-Nov-2018 22:15:16 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[13-Nov-2018 22:15:16 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[13-Nov-2018 22:15:16 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[13-Nov-2018 22:15:16 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[13-Nov-2018 22:15:16 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[13-Nov-2018 22:15:16 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[13-Nov-2018 22:15:16 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionUploadPicture() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[13-Nov-2018 22:15:19 UTC] PHP Fatal error:  Class 'frontend\modules\user\controllers\UploadedFile' not found in /home/ubuntu/workspace/instagram/frontend/modules/user/controllers/ProfileController.php on line 38
+[13-Nov-2018 22:15:19 UTC] PHP Stack trace:
+[13-Nov-2018 22:15:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[13-Nov-2018 22:15:19 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[13-Nov-2018 22:15:19 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[13-Nov-2018 22:15:19 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[13-Nov-2018 22:15:19 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[13-Nov-2018 22:15:19 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[13-Nov-2018 22:15:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[13-Nov-2018 22:15:19 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionUploadPicture() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57

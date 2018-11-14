@@ -2,10 +2,13 @@
     /* @var $this yii\web\View */
     /* @var $user frontend\models\User */
     /* @var $currentUser frontend\models\User */
+    /* @var $modelPicture frontend\modules\user\models\forms\PictureForm */
     
     use yii\helpers\Url;
     use yii\helpers\Html;
     use yii\helpers\HtmlPurifier;
+    
+    use dosamigos\fileupload\FileUpload;
 ?>
 
 <h3><?php echo Html::encode($user->username); ?></h3>
@@ -14,6 +17,32 @@
 <?php if ($currentUser && !$user->equals($currentUser)): ?>
 
   <hr>
+  
+  <?= FileUpload::widget([
+    //наша модель frontend\modules\user\models\forms\PictureForm
+    'model' => $modelPicture,
+    //$picture - атрибут в ней
+    'attribute' => 'picture',
+    //путь к контроллеру и AJAX-action
+    'url' => ['/user/profile/upload-picture'], // your url, this is just for demo purposes,
+    'options' => ['accept' => 'image/*'],
+    'clientOptions' => [
+        'maxFileSize' => 2000000
+    ],
+    // Also, you can specify jQuery-File-Upload events
+    // see: https://github.com/blueimp/jQuery-File-Upload/wiki/Options#processing-callback-options
+    'clientEvents' => [
+        'fileuploaddone' => 'function(e, data) {
+                                console.log(e);
+                                console.log(data);
+                            }',
+        'fileuploadfail' => 'function(e, data) {
+                                console.log(e);
+                                console.log(data);
+                            }',
+    ],
+  ]); ?>
+  
   
   <?php if (!$currentUser->isFollowing($user)): ?>
     <a href="<?php echo Url::to(['/user/profile/subscribe', 'id' => $user->getId()]) ?>" class="btn btn-info">Подписаться</a>
