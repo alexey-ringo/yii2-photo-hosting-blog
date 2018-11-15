@@ -7,7 +7,7 @@ use yii\web\Controller;
 use frontend\models\User;
 use yii\web\NotFoundHttpException;
 
-use yii\web\Response;
+//use yii\web\Response;
 use yii\web\UploadedFile;
 use frontend\modules\user\models\forms\PictureForm;
 
@@ -39,17 +39,35 @@ class ProfileController extends Controller
      */
     public function actionUploadPicture() {
         $model = new PictureForm();
+        //В атрибут объекта класса PictureForm загружаем объект класса UploadedFile
         $model->picture = UploadedFile::getInstance($model, 'picture');
+        /*
+        [picture] => yii\web\UploadedFile Object
+        (
+            [name] => IMG_0522.JPG
+            [tempName] => /tmp/phpw2fFhB
+            [type] => image/jpeg
+            [size] => 611652
+            [error] => 0
+        )
+        */
         
-        if($model->validate()) {
-            echo '<pre>';
-            print_r($model->attributes);
-            echo '</pre>';
-            echo 'OK'; die;
+        if ($model->validate()) {   
+            
+            //Получаем текущего пользователя
+            $user = Yii::$app->user->identity;
+            //Загружаем файл, сохраняем,
+            //и Записываем возвращенный путь к загруженному файлу 
+            //в атрибут текущего пользователя (прикрепляем аватарку к данному пользователю)
+            $user->picture = Yii::$app->storage->saveUploadedFile($model->picture); // 15/27/30379e706840f951d22de02458a4788eb55f.jpg
+            
+            //Сохраняем текущего пользователя без валидации - только его вновь наполненный аттрибут picture
+            if ($user->save(false, ['picture'])) {
+                echo '<pre>';
+                print_r($user->attributes); die;
+            }
         }
-        echo '<pre>';
-        print_r($model->getErrors());
-        echo '</pre>';
+        
     }
     
     public function actionSubscribe($id) {

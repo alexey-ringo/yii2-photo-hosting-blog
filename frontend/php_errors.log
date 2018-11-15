@@ -240,3 +240,86 @@ $_SERVER = [
 [13-Nov-2018 22:15:19 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
 [13-Nov-2018 22:15:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
 [13-Nov-2018 22:15:19 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionUploadPicture() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 12:12:27 UTC] PHP Fatal error:  Class frontend\components\Storage contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (frontend\components\StorageInterface::getFile) in /home/ubuntu/workspace/instagram/frontend/components/Storage.php on line 100
+[14-Nov-2018 12:12:27 UTC] PHP Stack trace:
+[14-Nov-2018 12:12:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[14-Nov-2018 12:12:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[14-Nov-2018 12:12:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[14-Nov-2018 12:12:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[14-Nov-2018 12:12:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[14-Nov-2018 12:12:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[14-Nov-2018 12:12:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 12:12:27 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionUploadPicture() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 12:12:27 UTC] PHP   9. yii\di\ServiceLocator->__get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:67
+[14-Nov-2018 12:12:27 UTC] PHP  10. yii\base\Module->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:74
+[14-Nov-2018 12:12:27 UTC] PHP  11. yii\di\ServiceLocator->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:742
+[14-Nov-2018 12:12:27 UTC] PHP  12. yii\BaseYii::createObject() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:137
+[14-Nov-2018 12:12:27 UTC] PHP  13. yii\di\Container->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:349
+[14-Nov-2018 12:12:27 UTC] PHP  14. yii\di\Container->build() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:156
+[14-Nov-2018 12:12:27 UTC] PHP  15. yii\di\Container->getDependencies() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:364
+[14-Nov-2018 12:12:27 UTC] PHP  16. ReflectionClass->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:12:27 UTC] PHP  17. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:12:27 UTC] PHP  18. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:12:27 UTC] PHP  19. include() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Nov-2018 12:13:02 UTC] PHP Fatal error:  Class frontend\components\Storage contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (frontend\components\StorageInterface::getFile) in /home/ubuntu/workspace/instagram/frontend/components/Storage.php on line 100
+[14-Nov-2018 12:13:02 UTC] PHP Stack trace:
+[14-Nov-2018 12:13:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[14-Nov-2018 12:13:02 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[14-Nov-2018 12:13:02 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[14-Nov-2018 12:13:02 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[14-Nov-2018 12:13:02 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[14-Nov-2018 12:13:02 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[14-Nov-2018 12:13:02 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 12:13:02 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionUploadPicture() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 12:13:02 UTC] PHP   9. yii\di\ServiceLocator->__get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:67
+[14-Nov-2018 12:13:02 UTC] PHP  10. yii\base\Module->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:74
+[14-Nov-2018 12:13:02 UTC] PHP  11. yii\di\ServiceLocator->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:742
+[14-Nov-2018 12:13:02 UTC] PHP  12. yii\BaseYii::createObject() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:137
+[14-Nov-2018 12:13:02 UTC] PHP  13. yii\di\Container->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:349
+[14-Nov-2018 12:13:02 UTC] PHP  14. yii\di\Container->build() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:156
+[14-Nov-2018 12:13:02 UTC] PHP  15. yii\di\Container->getDependencies() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:364
+[14-Nov-2018 12:13:02 UTC] PHP  16. ReflectionClass->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:13:02 UTC] PHP  17. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:13:02 UTC] PHP  18. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 12:13:02 UTC] PHP  19. include() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Nov-2018 22:09:26 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/instagram/frontend/modules/user/views/profile/view.php on line 20
+[14-Nov-2018 22:09:26 UTC] PHP Stack trace:
+[14-Nov-2018 22:09:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[14-Nov-2018 22:09:26 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[14-Nov-2018 22:09:26 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[14-Nov-2018 22:09:26 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[14-Nov-2018 22:09:26 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[14-Nov-2018 22:09:26 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[14-Nov-2018 22:09:26 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 22:09:26 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionView() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 22:09:26 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/modules/user/controllers/ProfileController.php:33
+[14-Nov-2018 22:09:26 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[14-Nov-2018 22:09:26 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[14-Nov-2018 22:09:26 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[14-Nov-2018 22:29:43 UTC] PHP Fatal error:  Declaration of frontend\components\Storage::getFile() must be compatible with frontend\components\StorageInterface::getFile(frontend\components\string $filename) in /home/ubuntu/workspace/instagram/frontend/components/Storage.php on line 16
+[14-Nov-2018 22:29:43 UTC] PHP Stack trace:
+[14-Nov-2018 22:29:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[14-Nov-2018 22:29:43 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[14-Nov-2018 22:29:43 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[14-Nov-2018 22:29:43 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[14-Nov-2018 22:29:43 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[14-Nov-2018 22:29:43 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[14-Nov-2018 22:29:43 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 22:29:43 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionView() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Nov-2018 22:29:43 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/modules/user/controllers/ProfileController.php:33
+[14-Nov-2018 22:29:43 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[14-Nov-2018 22:29:43 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[14-Nov-2018 22:29:43 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[14-Nov-2018 22:29:43 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[14-Nov-2018 22:29:43 UTC] PHP  14. frontend\models\User->getPicture() /home/ubuntu/workspace/instagram/frontend/modules/user/views/profile/view.php:17
+[14-Nov-2018 22:29:43 UTC] PHP  15. yii\di\ServiceLocator->__get() /home/ubuntu/workspace/instagram/frontend/modules/user/views/profile/view.php:325
+[14-Nov-2018 22:29:43 UTC] PHP  16. yii\base\Module->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:74
+[14-Nov-2018 22:29:43 UTC] PHP  17. yii\di\ServiceLocator->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:742
+[14-Nov-2018 22:29:43 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/ServiceLocator.php:137
+[14-Nov-2018 22:29:43 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:349
+[14-Nov-2018 22:29:43 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:156
+[14-Nov-2018 22:29:43 UTC] PHP  21. yii\di\Container->getDependencies() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:364
+[14-Nov-2018 22:29:43 UTC] PHP  22. ReflectionClass->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 22:29:43 UTC] PHP  23. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 22:29:43 UTC] PHP  24. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
+[14-Nov-2018 22:29:43 UTC] PHP  25. include() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:293

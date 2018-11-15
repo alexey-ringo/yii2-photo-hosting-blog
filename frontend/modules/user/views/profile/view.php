@@ -14,9 +14,12 @@
 <h3><?php echo Html::encode($user->username); ?></h3>
 <p><?php echo HtmlPurifier::process($user->about); ?></p>
 
-<?php if ($currentUser && !$user->equals($currentUser)): ?>
+ <img src="<?php echo $user->getPicture(); ?>" />
+
+<?php if ($currentUser && $user->equals($currentUser)): ?>
 
   <hr>
+ 
   
   <?= FileUpload::widget([
     //наша модель frontend\modules\user\models\forms\PictureForm
@@ -42,8 +45,9 @@
                             }',
     ],
   ]); ?>
-  
-  
+<?php endif; ?>  
+
+<?php if ($currentUser && !$user->equals($currentUser)): ?>
   <?php if (!$currentUser->isFollowing($user)): ?>
     <a href="<?php echo Url::to(['/user/profile/subscribe', 'id' => $user->getId()]) ?>" class="btn btn-info">Подписаться</a>
   <?php else: ?>

@@ -29,6 +29,8 @@ class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
+    
+    const DEFAULT_IMAGE = '/img/profile_default_image.jpg';
 
 
     /**
@@ -310,6 +312,22 @@ class User extends ActiveRecord implements IdentityInterface
         /* @var $redis Connection */
         $redis = Yii::$app->redis;
         return (bool) $redis->sismember("user:{$this->getId()}:subscriptions", $user->getId());
+    }
+    
+    /**
+     * Get profile picture
+     * @return string
+     */
+    //Возвращаем картинку на страницу пользователя,
+    //вставленную в его атрибут picture
+    public function getPicture()
+    {
+        //Если у юзера не пустой атрибут picture,
+        if ($this->picture) {
+            //то получаем полный путь к файлу картинки
+            return Yii::$app->storage->getFile($this->picture);
+        }
+        return self::DEFAULT_IMAGE;
     }
     
 }
