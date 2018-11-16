@@ -7,7 +7,7 @@ use yii\web\Controller;
 use frontend\models\User;
 use yii\web\NotFoundHttpException;
 
-//use yii\web\Response;
+use yii\web\Response;
 use yii\web\UploadedFile;
 use frontend\modules\user\models\forms\PictureForm;
 
@@ -38,6 +38,9 @@ class ProfileController extends Controller
      * Handle profile image upload via AJAX request
      */
     public function actionUploadPicture() {
+        //Установка формата ответа
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        
         $model = new PictureForm();
         //В атрибут объекта класса PictureForm загружаем объект класса UploadedFile
         $model->picture = UploadedFile::getInstance($model, 'picture');
@@ -63,11 +66,13 @@ class ProfileController extends Controller
             
             //Сохраняем текущего пользователя без валидации - только его вновь наполненный аттрибут picture
             if ($user->save(false, ['picture'])) {
-                echo '<pre>';
-                print_r($user->attributes); die;
+                return [
+                    'success' => true, 
+                    'pictureUri' => Yii::$app->storage->getFile($user->picture),
+                ];
             }
         }
-        
+        return ['success' => false, 'errors' => $model->getErrors()];
     }
     
     public function actionSubscribe($id) {

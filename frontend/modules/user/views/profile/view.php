@@ -14,9 +14,13 @@
 <h3><?php echo Html::encode($user->username); ?></h3>
 <p><?php echo HtmlPurifier::process($user->about); ?></p>
 
- <img src="<?php echo $user->getPicture(); ?>" />
+ <img src="<?php echo $user->getPicture(); ?>" id="profile-picture" />
 
 <?php if ($currentUser && $user->equals($currentUser)): ?>
+
+  <div class="alert alert-success display-none" id="profile-image-success">Аватарка загружена</div>
+  <div class="alert alert-danger display-none" id="profile-image-fail"></div>
+
 
   <hr>
  
@@ -36,13 +40,20 @@
     // see: https://github.com/blueimp/jQuery-File-Upload/wiki/Options#processing-callback-options
     'clientEvents' => [
         'fileuploaddone' => 'function(e, data) {
-                                console.log(e);
-                                console.log(data);
-                            }',
-        'fileuploadfail' => 'function(e, data) {
-                                console.log(e);
-                                console.log(data);
-                            }',
+              //Если ответ от ProfileController@actionUploadPicture - success
+              if (data.result.success) {
+                    //Показываем сообщение об успешной загрузке
+                    $("#profile-image-success").show();
+                    //Прячем сообщение об неуспешной загрузке
+                    $("#profile-image-fail").hide();
+                    //Динамически устанавливаем src из ответа JSON
+                    $("#profile-picture").attr("src", data.result.pictureUri);
+                } else {
+                    $("#profile-image-fail").html(data.result.errors.picture).show();
+                    $("#profile-image-success").hide();
+                }        
+        }',
+        
     ],
   ]); ?>
 <?php endif; ?>  
