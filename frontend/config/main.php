@@ -16,6 +16,10 @@ return [
         'user' => [
             'class' => 'frontend\modules\user\Module',
         ],
+        //И модуль CRUD для создания постов
+        'post' => [
+            'class' => 'frontend\modules\post\Module',
+        ],
     ],
     'components' => [
         'request' => [

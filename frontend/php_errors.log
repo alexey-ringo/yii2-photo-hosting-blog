@@ -323,3 +323,13 @@ $_SERVER = [
 [14-Nov-2018 22:29:43 UTC] PHP  23. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
 [14-Nov-2018 22:29:43 UTC] PHP  24. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:428
 [14-Nov-2018 22:29:43 UTC] PHP  25. include() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:293
+[16-Nov-2018 22:23:28 UTC] PHP Fatal error:  Class 'frontend\modules\post\controllers\UploadedFile' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php on line 24
+[16-Nov-2018 22:23:28 UTC] PHP Stack trace:
+[16-Nov-2018 22:23:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[16-Nov-2018 22:23:28 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[16-Nov-2018 22:23:28 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[16-Nov-2018 22:23:28 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[16-Nov-2018 22:23:28 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[16-Nov-2018 22:23:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[16-Nov-2018 22:23:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[16-Nov-2018 22:23:28 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57

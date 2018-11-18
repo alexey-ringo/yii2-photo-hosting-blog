@@ -16,7 +16,7 @@
 
  <img src="<?php echo $user->getPicture(); ?>" id="profile-picture" />
 
-<?php if ($currentUser && $user->equals($currentUser)): ?>
+<?php if (/*Первоначально проверим $currentUser на наличие*/$currentUser && $user->equals($currentUser)): ?>
 
   <div class="alert alert-success display-none" id="profile-image-success">Аватарка загружена</div>
   <div class="alert alert-danger display-none" id="profile-image-fail"></div>
