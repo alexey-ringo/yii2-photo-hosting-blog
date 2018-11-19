@@ -55,6 +55,7 @@ return [
                 '/' => 'site/index',
                 //Передаем в экшен только строковый параметр 'nickname'
                 'profile/<nickname:\w+>' => 'user/profile/view',
+                'post/<id:\d+>' => 'post/default/view',
             ],
         ],
         //Redis

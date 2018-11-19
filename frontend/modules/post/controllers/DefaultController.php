@@ -5,6 +5,7 @@ namespace frontend\modules\post\controllers;
 use Yii;
 use yii\web\Controller;
 use yii\web\UploadedFile;
+use frontend\models\Post;
 use frontend\modules\post\models\forms\PostForm;
 
 /**
@@ -32,5 +33,27 @@ class DefaultController extends Controller
         return $this->render('create', [
                 'model' => $model,
             ]);
+    }
+    
+    /**
+     * Renders for the create view for the module
+     * @return string
+     */
+    public function actionView($id) {
+        return $this->render('view', [
+            'post' => $this->findPost($id),
+            ]);
+    }
+    
+    /**
+     * @param integer $id
+     * @return User
+     * @throws NotFoundHttpException
+     */ 
+    private function findPost($id) {
+        if($user = Post::findOne($id)) {
+            return $user;
+        }
+        throw new NotFoundHttpException();
     }
 }
