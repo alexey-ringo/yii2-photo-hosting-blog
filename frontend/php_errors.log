@@ -333,3 +333,41 @@ $_SERVER = [
 [16-Nov-2018 22:23:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
 [16-Nov-2018 22:23:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
 [16-Nov-2018 22:23:28 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[19-Nov-2018 09:30:23 UTC] PHP Fatal error:  Class 'frontend\modules\post\controllers\NotFoundHttpException' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php on line 57
+[19-Nov-2018 09:30:23 UTC] PHP Stack trace:
+[19-Nov-2018 09:30:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[19-Nov-2018 09:30:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[19-Nov-2018 09:30:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[19-Nov-2018 09:30:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[19-Nov-2018 09:30:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[19-Nov-2018 09:30:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[19-Nov-2018 09:30:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[19-Nov-2018 09:30:23 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionView() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[19-Nov-2018 09:30:23 UTC] PHP   9. frontend\modules\post\controllers\DefaultController->findPost() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:44
+[19-Nov-2018 09:41:57 UTC] PHP Fatal error:  Class 'JqueryAsset' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/views/default/view.php on line 44
+[19-Nov-2018 09:41:57 UTC] PHP Stack trace:
+[19-Nov-2018 09:41:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[19-Nov-2018 09:41:57 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[19-Nov-2018 09:41:57 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[19-Nov-2018 09:41:57 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[19-Nov-2018 09:41:57 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[19-Nov-2018 09:41:57 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[19-Nov-2018 09:41:57 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[19-Nov-2018 09:41:57 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionView() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[19-Nov-2018 09:41:57 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:45
+[19-Nov-2018 09:41:57 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[19-Nov-2018 09:41:57 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[19-Nov-2018 09:41:57 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[19-Nov-2018 09:41:57 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[19-Nov-2018 10:09:56 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php on line 59
+[19-Nov-2018 10:09:56 UTC] PHP Stack trace:
+[19-Nov-2018 10:09:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[19-Nov-2018 10:09:56 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[19-Nov-2018 10:09:56 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[19-Nov-2018 10:09:56 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[19-Nov-2018 10:09:56 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:522
+[19-Nov-2018 10:09:56 UTC] PHP   6. yii\base\Module->createController() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:588
+[19-Nov-2018 10:09:56 UTC] PHP   7. yii\base\Module->createControllerByID() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:596
+[19-Nov-2018 10:09:56 UTC] PHP   8. class_exists() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
+[19-Nov-2018 10:09:56 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
+[19-Nov-2018 10:09:56 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
