@@ -10,6 +10,8 @@ use Intervention\Image\ImageManager;
 class PostForm extends Model {
     
     const MAX_DESCRIPTION_LENGHT = 1000;
+    //Событие публикации поста
+    const EVENT_POST_CREATED = 'post_created';
     
     public $picture;
     public $description;
@@ -37,7 +39,9 @@ class PostForm extends Model {
     public function __construct(User $user) {
         $this->user = $user;
         //Обработчик собития окончания валидации
-        $this->on(self::EVEN_AFTER_VALIDATE, [$this, 'resizePicture']);
+        $this->on(self::EVENT_AFTER_VALIDATE, [$this, 'resizePicture']);
+        //Подпишем addToFeeds в компоненте на событие публикации
+        $this->on(self::EVENT_POST_CREATED, [Yii::$app->feedService, 'addToFeeds']);
     }
     
     /**
@@ -90,9 +94,13 @@ class PostForm extends Model {
             $post->created_at = time();
             $post->filename = Yii::$app->storage->saveUploadedFile($this->picture);
             $post->user_id = $this->user->getId();
-            return $post->save(false); //false - Валидация в модели Post не требуется
+            if ($post->save(false)) { //false - Валидация в модели Post не требуется
+                $this->trigger(self::EVENT_POST_CREATED);
+                return true;
+            }
+            
         }
-        
+        return false;
     }
     
     /**
