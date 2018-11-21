@@ -371,3 +371,49 @@ $_SERVER = [
 [19-Nov-2018 10:09:56 UTC] PHP   8. class_exists() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
 [19-Nov-2018 10:09:56 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
 [19-Nov-2018 10:09:56 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:637
+[21-Nov-2018 11:51:36 UTC] PHP Fatal error:  Class 'frontend\models\events\PostCreateEvent' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/models/forms/PostForm.php on line 102
+[21-Nov-2018 11:51:36 UTC] PHP Stack trace:
+[21-Nov-2018 11:51:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 11:51:36 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 11:51:36 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 11:51:36 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 11:51:36 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 11:51:36 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 11:51:36 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:51:36 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:51:36 UTC] PHP   9. frontend\modules\post\models\forms\PostForm->save() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:32
+[21-Nov-2018 11:53:43 UTC] PHP Fatal error:  Class 'frontend\models\events\PostCreateEvent' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/models/forms/PostForm.php on line 102
+[21-Nov-2018 11:53:43 UTC] PHP Stack trace:
+[21-Nov-2018 11:53:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 11:53:43 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 11:53:43 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 11:53:43 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 11:53:43 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 11:53:43 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 11:53:43 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:53:43 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:53:43 UTC] PHP   9. frontend\modules\post\models\forms\PostForm->save() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:32
+[21-Nov-2018 11:55:34 UTC] PHP Fatal error:  Class 'frontend\modules\post\models\forms\PostCreateEvent' not found in /home/ubuntu/workspace/instagram/frontend/modules/post/models/forms/PostForm.php on line 102
+[21-Nov-2018 11:55:34 UTC] PHP Stack trace:
+[21-Nov-2018 11:55:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 11:55:34 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 11:55:34 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 11:55:34 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 11:55:34 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 11:55:34 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 11:55:34 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:55:34 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:55:34 UTC] PHP   9. frontend\modules\post\models\forms\PostForm->save() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:32
+[21-Nov-2018 11:56:15 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ';' or '{' in /home/ubuntu/workspace/instagram/frontend/models/events/PostCreatedEvent.php on line 24
+[21-Nov-2018 11:56:15 UTC] PHP Stack trace:
+[21-Nov-2018 11:56:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 11:56:15 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 11:56:15 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 11:56:15 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 11:56:15 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 11:56:15 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 11:56:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:56:15 UTC] PHP   8. frontend\modules\post\controllers\DefaultController->actionCreate() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 11:56:15 UTC] PHP   9. frontend\modules\post\models\forms\PostForm->save() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:32
+[21-Nov-2018 11:56:15 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:102
+[21-Nov-2018 11:56:15 UTC] PHP  11. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:102

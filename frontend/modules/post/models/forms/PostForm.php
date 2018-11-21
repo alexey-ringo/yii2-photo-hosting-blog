@@ -6,6 +6,7 @@ use yii\base\Model;
 use frontend\models\Post;
 use frontend\models\User;
 use Intervention\Image\ImageManager;
+use frontend\models\events\PostCreatedEvent;
 
 class PostForm extends Model {
     
@@ -16,6 +17,8 @@ class PostForm extends Model {
     public $picture;
     public $description;
     
+    //Получили через Конструктор
+    //Передано из actionCreate при создании нового поста (создание объекта PostForm)
     private $user;
     
     /**
@@ -95,7 +98,13 @@ class PostForm extends Model {
             $post->filename = Yii::$app->storage->saveUploadedFile($this->picture);
             $post->user_id = $this->user->getId();
             if ($post->save(false)) { //false - Валидация в модели Post не требуется
-                $this->trigger(self::EVENT_POST_CREATED);
+                //Перед вызовом EVENT_POST_CREATED
+                $event = new PostCreatedEvent();
+                //Прикрепляем данные для создания ленты новостей
+                $event->user = $this->user;
+                $event->post = $post;
+                //Передаем $event вместе с событием в Yii::$app->feedService addToFeeds()
+                $this->trigger(self::EVENT_POST_CREATED, $event);
                 return true;
             }
             
