@@ -5,6 +5,7 @@ use Yii;
 use yii\base\Model;
 use frontend\models\Post;
 use frontend\models\User;
+use Intervention\Image\ImageManager;
 
 class PostForm extends Model {
     
@@ -35,6 +36,29 @@ class PostForm extends Model {
      */
     public function __construct(User $user) {
         $this->user = $user;
+        //Обработчик собития окончания валидации
+        $this->on(self::EVEN_AFTER_VALIDATE, [$this, 'resizePicture']);
+    }
+    
+    /**
+     * Resize downloaded image if it needs
+     */
+    public function resizePicture() {
+        $width = Yii::$app->params['postPicture']['maxWidth'];
+        $height = Yii::$app->params['postPicture']['maxHeight'];
+        
+        $manager = new ImageManager(array('driver' => 'imagick'));
+        
+        //пример значения [tempName] => /tmp/phpCXpi4U - см коменты в валидации
+        $image = $manager->make($this->picture->tempName);
+        
+        $image->resize($width, $height, function($constraint) {
+            //Сохранение пропорций изображения
+            $constraint->aspectRatio();
+            //Если разрешение изображения меньше, чем в params['postPicture'][]
+            //то не изменяем его
+            $constraint->upsize();
+        })->save(); //измененное изображение сохраняем пока в тот же /tmp/...
     }
     
     /**
@@ -43,6 +67,8 @@ class PostForm extends Model {
     public function save() {
         if($this->validate()) {
             /*
+            В свойстве picture объекта PostForm сохраняется объект класса UploadedFile - пример ниже:
+            
             frontend\modules\post\models\forms\PostForm Object
                 (
                     [picture] => yii\web\UploadedFile Object
@@ -64,7 +90,7 @@ class PostForm extends Model {
             $post->created_at = time();
             $post->filename = Yii::$app->storage->saveUploadedFile($this->picture);
             $post->user_id = $this->user->getId();
-            return $post->save(false); //Валидация в модели Post не требуется
+            return $post->save(false); //false - Валидация в модели Post не требуется
         }
         
     }
