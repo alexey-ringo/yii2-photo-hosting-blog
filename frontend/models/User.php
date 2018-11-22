@@ -205,10 +205,11 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
     
+    //Возвращает nickname пользователя, переданного из view (т.е. - просматриваемого пользователя),
+    //если он у него есть - или id пользователя, если нет
     /**
      * Return mixed
      */ 
-    //Возвращает nickname пользователя, если он у него есть - иначе id пользователя
     public function getNickname() {
         /*
         if ($this->nickname) {
@@ -220,6 +221,11 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->nickname ? $this->nickname : $this->getId();
     }
     
+    //Подписываем текущего пользователя на выбранного им пользователя
+    /**
+     * Subscribe current user to given user
+     * @param \frontend\models\User $user
+     */
     public function followUser(User $user) {
         $redis = Yii::$app->redis;
         
@@ -233,6 +239,11 @@ class User extends ActiveRecord implements IdentityInterface
         $redis->sadd("user:{$user->getId()}:followers", $this->getId());
     }
     
+    //Отписываем текущего пользователя от выбранного им пользователя
+    /**
+     * Unsubscribe current user from given user
+     * @param \frontend\models\User $user
+     */
      public function unfollowUser(User $user) {
         $redis = Yii::$app->redis;
         
@@ -246,7 +257,11 @@ class User extends ActiveRecord implements IdentityInterface
         $redis->srem("user:{$user->getId()}:followers", $this->getId());
     }
     
-    //получить список подписок просматриваемого в progile/view пользователя 
+    //получить список подписок пользователя, профиль которого просматривается в profile/view
+    //т.е., $user->getSubscriptions() на view профиля, где $user - пользователь, чью стр. просматриваем
+    /**
+     * @return array
+     */
     public function getSubscriptions() {
         /* @var redis Connection */
         $redis = Yii::$app->redis;
@@ -258,6 +273,11 @@ class User extends ActiveRecord implements IdentityInterface
         
     }
     
+    //получить список подписчиков пользователя, профиль которого просматривается в profile/view
+    //т.е., $user->getFollowers() на view профиля, где $user - пользователь, чью стр. просматриваем
+    /**
+     * @return array
+     */
     public function getFollowers() {
         /* @var redis Connection */
         $redis = Yii::$app->redis;
@@ -268,6 +288,7 @@ class User extends ActiveRecord implements IdentityInterface
         return User::find()->select('id, username, nickname')->where(['id' => $ids])->orderBy('username')->asArray()->all();
     }
     
+    //
     public function countSubscriptions() {
         /* @var redis Connection */
         $redis = Yii::$app->redis;
@@ -283,7 +304,6 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @param \frontend\models\User $user
      */
-     
     public function getMutualSubscriptionsTo(User $user) {
         //Current user subscriptions
         //Подписки текущего зарегистрированного пользователя
@@ -314,12 +334,12 @@ class User extends ActiveRecord implements IdentityInterface
         return (bool) $redis->sismember("user:{$this->getId()}:subscriptions", $user->getId());
     }
     
+    //Возвращаем картинку на страницу пользователя,
+    //вставленную в его атрибут picture
     /**
      * Get profile picture
      * @return string
      */
-    //Возвращаем картинку на страницу пользователя,
-    //вставленную в его атрибут picture
     public function getPicture()
     {
         //Если у юзера не пустой атрибут picture,
@@ -330,4 +350,29 @@ class User extends ActiveRecord implements IdentityInterface
         return self::DEFAULT_IMAGE;
     }
     
+    /**
+     * Get data for newsFeed
+     * @param integer $limit
+     * @return array
+     */ 
+    public function getFeed(/* int */$limit) {
+        $order = ['post_created_at' => SORT_DESC];
+        return $this->hasMany(Feed::className(), ['user_id' => 'id'])->orderBy($order)->limit($limit)->all();
+    }
+    
+    //Проверка - лайкнул ли пользователь пост с $postId
+    /**
+     * Check whether current user likes post with given id
+     * @param integer $postId
+     * @return boolean
+     */
+    public function likesPost(/*int*/ $postId)
+    {
+        /* @var $redis Connection */
+        $redis = Yii::$app->redis;
+        //Проверка соответвия $postId множеству
+        //Само множество - перечень постов, которых лайкнул пользователь
+        return (bool) $redis->sismember("user:{$this->getId()}:likes", $postId);
+        
+    }
 }

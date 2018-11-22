@@ -417,3 +417,212 @@ $_SERVER = [
 [21-Nov-2018 11:56:15 UTC] PHP   9. frontend\modules\post\models\forms\PostForm->save() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:32
 [21-Nov-2018 11:56:15 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:102
 [21-Nov-2018 11:56:15 UTC] PHP  11. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/frontend/modules/post/controllers/DefaultController.php:102
+[21-Nov-2018 21:40:05 UTC] PHP Fatal error:  Class 'HtmlPurifier' not found in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 29
+[21-Nov-2018 21:40:05 UTC] PHP Stack trace:
+[21-Nov-2018 21:40:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 21:40:05 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 21:40:05 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 21:40:05 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 21:40:05 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 21:40:05 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 21:40:05 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 21:40:05 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 21:40:05 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 21:40:05 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 21:40:05 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 21:40:05 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 21:40:05 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 21:43:28 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 40
+[21-Nov-2018 21:43:28 UTC] PHP Stack trace:
+[21-Nov-2018 21:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 21:43:28 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 21:43:28 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 21:43:28 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 21:43:28 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 21:43:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 21:43:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 21:43:28 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 21:43:28 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 21:43:28 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 21:43:28 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 21:43:28 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 21:43:28 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:01:47 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:01:47 UTC] PHP Stack trace:
+[21-Nov-2018 22:01:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:01:47 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:01:47 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:01:47 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:01:47 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:01:47 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:01:47 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:01:47 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:01:47 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:01:47 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:01:47 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:01:47 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:01:47 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:02:46 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:02:46 UTC] PHP Stack trace:
+[21-Nov-2018 22:02:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:02:46 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:02:46 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:02:46 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:02:46 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:02:46 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:02:46 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:02:46 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:02:46 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:02:46 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:02:46 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:02:46 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:02:46 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:12:51 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:12:51 UTC] PHP Stack trace:
+[21-Nov-2018 22:12:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:12:51 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:12:51 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:12:51 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:12:51 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:12:51 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:12:51 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:12:51 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:12:51 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:12:51 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:12:51 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:12:51 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:12:51 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:16:44 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:16:44 UTC] PHP Stack trace:
+[21-Nov-2018 22:16:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:16:44 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:16:44 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:16:44 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:16:44 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:16:44 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:16:44 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:16:44 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:16:44 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:16:44 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:16:44 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:16:44 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:16:44 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:19:02 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:19:02 UTC] PHP Stack trace:
+[21-Nov-2018 22:19:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:19:02 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:19:02 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:19:02 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:19:02 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:19:02 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:19:02 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:19:02 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:19:02 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:19:02 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:19:02 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:19:02 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:19:02 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:19:35 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/instagram/frontend/models/User.php on line 361
+[21-Nov-2018 22:19:35 UTC] PHP Stack trace:
+[21-Nov-2018 22:19:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:19:35 UTC] PHP   2. yii\base\Application->__construct() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:19:35 UTC] PHP   3. yii\base\BaseObject->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:206
+[21-Nov-2018 22:19:35 UTC] PHP   4. yii\base\Application->init() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/BaseObject.php:109
+[21-Nov-2018 22:19:35 UTC] PHP   5. yii\web\Application->bootstrap() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:273
+[21-Nov-2018 22:19:35 UTC] PHP   6. yii\base\Application->bootstrap() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:69
+[21-Nov-2018 22:19:35 UTC] PHP   7. yii\base\Module->getModule() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:315
+[21-Nov-2018 22:19:35 UTC] PHP   8. yii\BaseYii::createObject() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:427
+[21-Nov-2018 22:19:35 UTC] PHP   9. yii\di\Container->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:349
+[21-Nov-2018 22:19:35 UTC] PHP  10. yii\di\Container->build() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:156
+[21-Nov-2018 22:19:35 UTC] PHP  11. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:383
+[21-Nov-2018 22:19:35 UTC] PHP  12. yii\base\Module->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:383
+[21-Nov-2018 22:19:35 UTC] PHP  13. yii\base\BaseObject->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:158
+[21-Nov-2018 22:19:35 UTC] PHP  14. yii\debug\Module->init() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/BaseObject.php:109
+[21-Nov-2018 22:19:35 UTC] PHP  15. yii\debug\Module->initPanels() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2-debug/Module.php:149
+[21-Nov-2018 22:19:35 UTC] PHP  16. yii\BaseYii::createObject() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2-debug/Module.php:177
+[21-Nov-2018 22:19:35 UTC] PHP  17. yii\di\Container->get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/BaseYii.php:349
+[21-Nov-2018 22:19:35 UTC] PHP  18. yii\di\Container->build() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:156
+[21-Nov-2018 22:19:35 UTC] PHP  19. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:383
+[21-Nov-2018 22:19:35 UTC] PHP  20. yii\base\BaseObject->__construct() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/di/Container.php:383
+[21-Nov-2018 22:19:35 UTC] PHP  21. yii\debug\panels\UserPanel->init() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/BaseObject.php:109
+[21-Nov-2018 22:19:35 UTC] PHP  22. yii\base\Component->__get() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/BaseObject.php:81
+[21-Nov-2018 22:19:35 UTC] PHP  23. yii\web\User->getIsGuest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Component.php:139
+[21-Nov-2018 22:19:35 UTC] PHP  24. yii\web\User->getIdentity() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/User.php:360
+[21-Nov-2018 22:19:35 UTC] PHP  25. yii\web\User->renewAuthStatus() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/User.php:192
+[21-Nov-2018 22:19:35 UTC] PHP  26. spl_autoload_call() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/User.php:690
+[21-Nov-2018 22:19:35 UTC] PHP  27. yii\BaseYii::autoload() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/User.php:690
+[21-Nov-2018 22:20:28 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:20:28 UTC] PHP Stack trace:
+[21-Nov-2018 22:20:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:20:28 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:20:28 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:20:28 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:20:28 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:20:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:20:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:20:28 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:20:28 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:20:28 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:20:28 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:20:28 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:20:28 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:20:54 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:20:54 UTC] PHP Stack trace:
+[21-Nov-2018 22:20:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:20:54 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:20:54 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:20:54 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:20:54 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:20:54 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:20:54 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:20:54 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:20:54 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:20:54 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:20:54 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:20:54 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:20:54 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:21:25 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:21:25 UTC] PHP Stack trace:
+[21-Nov-2018 22:21:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:21:25 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:21:25 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:21:25 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:21:25 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:21:25 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:21:25 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:21:25 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:21:25 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:21:25 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:21:25 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:21:25 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:21:25 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:25:22 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:25:22 UTC] PHP Stack trace:
+[21-Nov-2018 22:25:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:25:22 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:25:22 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:25:22 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:25:22 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:25:22 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:25:22 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:25:22 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:25:22 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:25:22 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:25:22 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:25:22 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:25:22 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[21-Nov-2018 22:30:15 UTC] PHP Fatal error:  Call to a member function likesPost() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/site/index.php on line 41
+[21-Nov-2018 22:30:15 UTC] PHP Stack trace:
+[21-Nov-2018 22:30:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[21-Nov-2018 22:30:15 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[21-Nov-2018 22:30:15 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[21-Nov-2018 22:30:15 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[21-Nov-2018 22:30:15 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[21-Nov-2018 22:30:15 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[21-Nov-2018 22:30:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:30:15 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[21-Nov-2018 22:30:15 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/SiteController.php:63
+[21-Nov-2018 22:30:15 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[21-Nov-2018 22:30:15 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[21-Nov-2018 22:30:15 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[21-Nov-2018 22:30:15 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336

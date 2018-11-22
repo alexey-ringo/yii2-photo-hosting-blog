@@ -6,7 +6,8 @@ use frontend\models\User;
 use frontend\models\Post;
 
 /**
- * Передает данные вместе с событием EVENT_POST_CREATED
+ * Собирает и передает в сервис FeedService все прикрепленные данные о созданном посте
+ * вместе с самим событием создания нового поста EVENT_POST_CREATED
  * 
  */ 
 class PostCreatedEvent extends Event {

@@ -8,6 +8,9 @@ use frontend\models\User;
 use Intervention\Image\ImageManager;
 use frontend\models\events\PostCreatedEvent;
 
+/**
+ * Обработка публикации поста
+ */
 class PostForm extends Model {
     
     const MAX_DESCRIPTION_LENGHT = 1000;
@@ -17,7 +20,7 @@ class PostForm extends Model {
     public $picture;
     public $description;
     
-    //Получили через Конструктор
+    //Получили через Конструктор объект текущего пользователя (кто создает пост)
     //Передано из actionCreate при создании нового поста (создание объекта PostForm)
     private $user;
     
@@ -40,10 +43,11 @@ class PostForm extends Model {
      * @param User $user
      */
     public function __construct(User $user) {
+        //При создании поста из контроллера передали объект текущего пользователя, создающего пост 
         $this->user = $user;
         //Обработчик собития окончания валидации
         $this->on(self::EVENT_AFTER_VALIDATE, [$this, 'resizePicture']);
-        //Подпишем addToFeeds в компоненте на событие публикации
+        //Подпишем addToFeeds (в компоненте-сервисе новостной ленты) на событие публикации
         $this->on(self::EVENT_POST_CREATED, [Yii::$app->feedService, 'addToFeeds']);
     }
     
@@ -97,13 +101,21 @@ class PostForm extends Model {
             $post->created_at = time();
             $post->filename = Yii::$app->storage->saveUploadedFile($this->picture);
             $post->user_id = $this->user->getId();
+            
+            //Если пост успешно сохранен:
             if ($post->save(false)) { //false - Валидация в модели Post не требуется
-                //Перед вызовом EVENT_POST_CREATED
+                //Перед вызовом события публикации поста EVENT_POST_CREATED:
+                
+                //Объект для передачи данных о сохраненном посте в сервис новостной ленты вместе с событием публикации
                 $event = new PostCreatedEvent();
-                //Прикрепляем данные для создания ленты новостей
+                //Прикрепляем данные для создания ленты новостей:
+                //Пользователь, создающий пост
                 $event->user = $this->user;
                 $event->post = $post;
-                //Передаем $event вместе с событием в Yii::$app->feedService addToFeeds()
+                
+                //Передаем $event вместе с событием в компонент ленты Yii::$app->feedService addToFeeds()
+                //т.е. - вызываем событие публикации поста в новостной ленте
+                //начинает работу подписанный на это событие Yii::$app->feedService, 'addToFeeds'
                 $this->trigger(self::EVENT_POST_CREATED, $event);
                 return true;
             }

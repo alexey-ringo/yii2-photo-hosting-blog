@@ -93,7 +93,7 @@ class DefaultController extends Controller
         $post = $this->findPost($id);
         
         /* @var $currentUser User */
-        //Кто лайкнул
+        //Пользователь, который лайкнул (т.е. - текущий)
         $currentUser = Yii::$app->user->identity;
         
         //Изменение кол-ва лайков по данному посту

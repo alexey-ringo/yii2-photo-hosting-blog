@@ -75,6 +75,7 @@ class ProfileController extends Controller
         return ['success' => false, 'errors' => $model->getErrors()];
     }
     
+    //Подписка текущего пользователя на выбранного
     public function actionSubscribe($id) {
         if (Yii::$app->user->isGuest) {
             return $this->redirect(['/user/default/login']);
@@ -83,15 +84,16 @@ class ProfileController extends Controller
         /* @var $currentUser User */
         //Эксемпляр класса User, под которым сейчас залогинен текущий пользователь
         $currentUser = Yii::$app->user->identity;
-        //Пользователь, чью стр профиля просматриваем
+        //Пользователь, на которого хотим подписаться (чью стр профиля просматриваем)
         $user = $this->getUserById($id);
         
-        //Пользователя $currentUser нужно подписать на пользователя $user через метод followUser класса User
+        //Подписываем пользователя $currentUser на пользователя $user через метод followUser класса User
         $currentUser->followUser($user);
         
         return $this->redirect(['/user/profile/view', 'nickname' => $user->getNickName()]);
     }
     
+    //отписка текущего пользователя от выбранного
     public function actionUnsubscribe($id) {
         if (Yii::$app->user->isGuest) {
             return $this->redirect(['/user/default/login']);
@@ -109,6 +111,8 @@ class ProfileController extends Controller
         return $this->redirect(['/user/profile/view', 'nickname' => $user->getNickName()]);
     }
     
+    
+    //Возвращает экземпляр пользователя, но которого нужно подписаться в actionSubscribe()
     /**
      * @param integer $id
      * @return User
