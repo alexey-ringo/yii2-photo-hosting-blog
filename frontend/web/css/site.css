@@ -2,7 +2,8 @@ html,
 body {
     height: 100%;
 }
-
+/*---Прижимаем футер к низу экрана - убрали здесь и добавили в main.css---*/
+/*
 .wrap {
     min-height: 100%;
     height: auto;
@@ -13,6 +14,7 @@ body {
 .wrap > .container {
     padding: 70px 15px 20px;
 }
+
 
 .footer {
     height: 60px;
@@ -35,6 +37,7 @@ body {
     color: #c55;
     font-style: italic;
 }
+*/
 
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {

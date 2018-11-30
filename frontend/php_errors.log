@@ -626,3 +626,18 @@ $_SERVER = [
 [21-Nov-2018 22:30:15 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
 [21-Nov-2018 22:30:15 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
 [21-Nov-2018 22:30:15 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[24-Nov-2018 20:24:32 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/instagram/frontend/views/layouts/main.php on line 38
+[24-Nov-2018 20:24:32 UTC] PHP Stack trace:
+[24-Nov-2018 20:24:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[24-Nov-2018 20:24:32 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[24-Nov-2018 20:24:32 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[24-Nov-2018 20:24:32 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[24-Nov-2018 20:24:32 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[24-Nov-2018 20:24:32 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[24-Nov-2018 20:24:32 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[24-Nov-2018 20:24:32 UTC] PHP   8. frontend\modules\user\controllers\ProfileController->actionView() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[24-Nov-2018 20:24:32 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/modules/user/controllers/ProfileController.php:33
+[24-Nov-2018 20:24:32 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:385
+[24-Nov-2018 20:24:32 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:399
+[24-Nov-2018 20:24:32 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[24-Nov-2018 20:24:32 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
