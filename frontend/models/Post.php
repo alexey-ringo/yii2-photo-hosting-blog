@@ -13,6 +13,8 @@ use yii\db\ActiveRecord;
  * @property int $user_id
  * @property string $filename
  * @property string $description
+ * @property int $likes
+ * @property string $hashtag
  * @property int $created_at
  */
 class Post extends ActiveRecord
