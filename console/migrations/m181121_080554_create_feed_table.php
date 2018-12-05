@@ -12,18 +12,18 @@ class m181121_080554_create_feed_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('feed', [
-            'id' => $this->primaryKey(),
+        $this->createTable('{{%feed}}', [
+            'id' => $this->primaryKey()->unsigned(),
             //id пользователя, которому предназначена запись
-            'user_id' => $this->integer(),
-            'author_id' => $this->integer(),
+            'user_id' => $this->integer()->unsigned(),
+            'author_id' => $this->integer()->unsigned(),
             'author_name' => $this->string(),
             'author_nickname' => $this->integer(70),
             'author_picture' => $this->string(),
-            'post_id' => $this->integer(),
+            'post_id' => $this->integer()->unsigned(),
             'post_filename' => $this->string()->notNull(),
             'post_description' => $this->text(),
-            'post_created_at' => $this->integer()->notNull(),
+            'post_created_at' => $this->integer()->notNull()->unsigned(),
         ]);
     }
 
@@ -32,6 +32,6 @@ class m181121_080554_create_feed_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('feed');
+        $this->dropTable('{{%feed}}');
     }
 }

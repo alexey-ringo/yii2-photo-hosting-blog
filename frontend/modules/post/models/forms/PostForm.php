@@ -17,6 +17,7 @@ class PostForm extends Model {
     //Событие публикации поста
     const EVENT_POST_CREATED = 'post_created';
     
+    //Загрузили из формы методом Load
     public $picture;
     public $description;
     
@@ -98,7 +99,8 @@ class PostForm extends Model {
             
             $post = new Post();
             $post->description = $this->description;
-            $post->created_at = time();
+            //created_at заполняем в основной модели Post с помошью TimestampBehavior
+            //$post->created_at = time();
             $post->filename = Yii::$app->storage->saveUploadedFile($this->picture);
             $post->user_id = $this->user->getId();
             

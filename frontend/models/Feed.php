@@ -25,7 +25,7 @@ class Feed extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'feed';
+        return '{{%feed}}';
     }
 
     

@@ -12,14 +12,13 @@ class m181007_201848_create_auth_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('auth', [
-            'id' => $this->primaryKey(),
-            'user_id' => $this->integer()->notNull(),
+        $this->createTable('{{%auth}}', [
+            'id' => $this->primaryKey()->unsigned(),
+            'user_id' => $this->integer()->notNull()->unsigned(),
             'source' => $this->string()->notNull(),
             'source_id' => $this->string()->notNull(),
         ]);
 
-        $this->addForeignKey('fk-auth-user_id-user-id', 'auth', 'user_id', 'user', 'id', 'CASCADE', 'CASCADE');
     }
 
     /**
@@ -27,6 +26,6 @@ class m181007_201848_create_auth_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('auth');
+        $this->dropTable('{{%auth}}');
     }
 }

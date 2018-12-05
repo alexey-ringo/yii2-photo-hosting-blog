@@ -3,21 +3,21 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `post`.
+ * Handles the creation of table `comment`.
  */
-class m181116_124244_create_post_table extends Migration
+class m181130_133719_create_comment_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%post}}', [
+        $this->createTable('{{%comment}}', [
             'id' => $this->primaryKey()->unsigned(),
+            'parent_id' => $this->integer()->notNull()->defaultValue(0),
             'user_id' => $this->integer()->notNull()->unsigned(),
-            'filename' => $this->string()->notNull(),
-            'description' => $this->text(),
-            'complaints' => $this->integer()->unsigned(),
+            'post_id' => $this->integer()->notNull()->unsigned(),
+            'text' => $this->text(),
             'created_at' => $this->integer()->notNull()->unsigned(),
         ]);
     }
@@ -27,6 +27,6 @@ class m181116_124244_create_post_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('{{%post}}');
+        $this->dropTable('{{%comment}}');
     }
 }

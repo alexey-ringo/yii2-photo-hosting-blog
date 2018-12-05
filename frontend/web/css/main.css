@@ -530,3 +530,14 @@ footer .footer p.text {
 .blog-posts .post .post-bottom .post-likes a.display-none {
     display: none;
 }
+
+/* Post view - моя кастомизация */
+.comment .comment-user-image .author-image {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    /*margin: -5px 10px 0 0;*/
+}

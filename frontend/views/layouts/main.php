@@ -90,7 +90,7 @@ Insta3Asset::register($this);
             </div>
             
         </header>	
-            <div class="container full">
+        <div class="container full">
             
     <?= Alert::widget() ?>
     <?= $content ?>

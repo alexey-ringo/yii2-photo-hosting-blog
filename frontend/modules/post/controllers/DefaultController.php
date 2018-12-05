@@ -7,7 +7,9 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\web\UploadedFile;
 use frontend\models\Post;
+use frontend\models\Comment;
 use frontend\modules\post\models\forms\PostForm;
+use frontend\modules\post\models\forms\CommentForm;
 
 /**
  * Default controller for the `post` module
@@ -47,10 +49,12 @@ class DefaultController extends Controller
     public function actionView($id) {
         /* @var $currentUser User */
         $currentUser = Yii::$app->user->identity;
+        $comments = new Comment();
         
         return $this->render('view', [
             'post' => $this->findPost($id),
             'currentUser' => $currentUser,
+            'comments' => $comments->getCommentsByPost($id),
             ]);
     }
     
@@ -115,5 +119,37 @@ class DefaultController extends Controller
             return $user;
         }
         throw new NotFoundHttpException();
+    }
+    
+    public function actionCreateComment() {
+        if (Yii::$app->user->isGuest && !Yii::$app->request->isAjax && !Yii::$app->request->isPost) {
+            //return $this->redirect(['/user/default/login']);
+            return false;
+        }
+        $ajaxData = Yii::$app->request->post();
+        
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        
+        $modelComment = new CommentForm(Yii::$app->user->identity/*, $ajaxData['post_id'], $ajaxData['text']*/);
+        $comments = new Comment();
+        //Загружаем данные в CommentForm методом load()
+        //$modelComment->attributes = $ajaxData;
+        //В метод load() передаем в качестве имени формы - пустую строку, 
+        //что бы не передавать в Ajax например такое - CommentForm[text]
+        //public function load($data, $formName = null)
+        if($modelComment->load($ajaxData, '')) {
+            if($modelComment->save()) {
+                //Yii::$app->session->setFlash('success', 'Комментарий создан');
+                //return $this->goHome();
+            
+            
+            
+            return [
+                'success' => true,
+                'comments' => $comments->getCommentsByPost($ajaxData['post_id']),
+            ];
+            }
+        }
+        return false;
     }
 }

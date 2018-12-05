@@ -3,6 +3,8 @@
 namespace frontend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "post".
@@ -13,18 +15,34 @@ use Yii;
  * @property string $description
  * @property int $created_at
  */
-class Post extends \yii\db\ActiveRecord
+class Post extends ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'post';
+        return '{{%post}}';
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                 'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
+                ],
+                // если вместо метки времени UNIX используется datetime:
+                // 'value' => new Expression('NOW()'),
+            ],
+        ];
     }
 
     
-
     /**
      * {@inheritdoc}
      */
