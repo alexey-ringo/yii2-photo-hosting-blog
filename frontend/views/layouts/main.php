@@ -60,6 +60,7 @@ Insta3Asset::register($this);
                             <?php
                             $menuItems = [
                                 ['label' => 'Лента новостей', 'url' => ['/site/index']],
+                                ['label' => 'Популярные', 'url' => ['/popular/index']],
     
                             ];
                             if (Yii::$app->user->isGuest) {

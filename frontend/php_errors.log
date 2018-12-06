@@ -728,3 +728,63 @@ $_SERVER = [
 [04-Dec-2018 21:56:02 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
 [04-Dec-2018 21:56:02 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
 [04-Dec-2018 21:56:02 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[06-Dec-2018 14:15:49 UTC] PHP Fatal error:  Call to a member function countLikes() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/popular/index.php on line 58
+[06-Dec-2018 14:15:49 UTC] PHP Stack trace:
+[06-Dec-2018 14:15:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[06-Dec-2018 14:15:49 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[06-Dec-2018 14:15:49 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[06-Dec-2018 14:15:49 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[06-Dec-2018 14:15:49 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[06-Dec-2018 14:15:49 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Dec-2018 14:15:49 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:15:49 UTC] PHP   8. frontend\controllers\PopularController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:15:49 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/PopularController.php:18
+[06-Dec-2018 14:15:49 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[06-Dec-2018 14:15:49 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[06-Dec-2018 14:15:49 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[06-Dec-2018 14:15:49 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[06-Dec-2018 14:31:22 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/popular/index.php on line 22
+[06-Dec-2018 14:31:22 UTC] PHP Stack trace:
+[06-Dec-2018 14:31:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[06-Dec-2018 14:31:22 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[06-Dec-2018 14:31:22 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[06-Dec-2018 14:31:22 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[06-Dec-2018 14:31:22 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[06-Dec-2018 14:31:22 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Dec-2018 14:31:22 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:31:22 UTC] PHP   8. frontend\controllers\PopularController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:31:22 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/PopularController.php:18
+[06-Dec-2018 14:31:22 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[06-Dec-2018 14:31:22 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[06-Dec-2018 14:31:22 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[06-Dec-2018 14:31:22 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[06-Dec-2018 14:31:57 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/popular/index.php on line 22
+[06-Dec-2018 14:31:57 UTC] PHP Stack trace:
+[06-Dec-2018 14:31:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[06-Dec-2018 14:31:57 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[06-Dec-2018 14:31:57 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[06-Dec-2018 14:31:57 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[06-Dec-2018 14:31:57 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[06-Dec-2018 14:31:57 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Dec-2018 14:31:57 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:31:57 UTC] PHP   8. frontend\controllers\PopularController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:31:57 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/PopularController.php:18
+[06-Dec-2018 14:31:57 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[06-Dec-2018 14:31:57 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[06-Dec-2018 14:31:57 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[06-Dec-2018 14:31:57 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336
+[06-Dec-2018 14:32:00 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/instagram/frontend/views/popular/index.php on line 22
+[06-Dec-2018 14:32:00 UTC] PHP Stack trace:
+[06-Dec-2018 14:32:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/instagram/frontend/web/index.php:0
+[06-Dec-2018 14:32:00 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/instagram/frontend/web/index.php:17
+[06-Dec-2018 14:32:00 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Application.php:386
+[06-Dec-2018 14:32:00 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/web/Application.php:103
+[06-Dec-2018 14:32:00 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Module.php:528
+[06-Dec-2018 14:32:00 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Dec-2018 14:32:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:32:00 UTC] PHP   8. frontend\controllers\PopularController->actionIndex() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Dec-2018 14:32:00 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/instagram/frontend/controllers/PopularController.php:18
+[06-Dec-2018 14:32:00 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/Controller.php:384
+[06-Dec-2018 14:32:00 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:156
+[06-Dec-2018 14:32:00 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:254
+[06-Dec-2018 14:32:00 UTC] PHP  13. require() /home/ubuntu/workspace/instagram/vendor/yiisoft/yii2/base/View.php:336

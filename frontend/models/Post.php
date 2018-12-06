@@ -128,4 +128,8 @@ class Post extends ActiveRecord
         //Является ли id-пользователя одним из членов множества лайков поста
         return $redis->sismember("post:{$this->getId()}:likes", $user->getId());
     }
+    
+    public function getPosts() {
+        return self::find()->all();
+    }
 }
