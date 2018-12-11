@@ -1,0 +1,173 @@
+@media (max-width: 767px) {
+  /* стили для xs-устройств */
+    header .header-top {
+      display: none;
+  }
+  
+    .header-main-nav {
+      display: none;
+  }
+  
+    #yii-navbar-desctop {
+      display: block;
+  }
+  
+    .profile .profile-title a.btn {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .fileinput-button {
+        margin-top: 10px;
+      
+    }
+    
+    .navbar-brand > img {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .nav li > form > button.logout {
+      padding: 10px 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* стили для sm-устройств */
+   header .header-top {
+      display: block;
+  }
+  
+  .header-main-nav {
+      display: block;
+  }
+  
+  #yii-navbar-desctop {
+      display: none;
+  }
+  
+  .header-main-nav .main-nav-wrapper .main-menu ul li a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 20px 18px;
+    cursor: pointer;
+    }
+    
+  .nav li > form > button.logout {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 21px 16px;
+    cursor: pointer;
+    }
+    
+  .profile .profile-title a.btn {
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    }
+
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  /* стили для md-устройств */
+   header .header-top {
+      display: block;
+  }
+  
+  .header-main-nav {
+      display: block;
+  }
+  
+  #yii-navbar-desctop {
+      display: none;
+  }
+  
+  .header-main-nav .main-nav-wrapper .main-menu ul li a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 20px 20px;
+    cursor: pointer;
+    }
+    
+  .nav li > form > button.logout {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 21px 20px;
+    cursor: pointer;
+    }
+    
+  .profile .profile-title a.btn {
+    margin-left: 10px;
+ 
+    }
+
+}
+@media (min-width: 1200px) {
+  /* стили для lg-устройств */
+   header .header-top {
+      display: block;
+  }
+  
+  .header-main-nav {
+      display: block;
+  }
+  
+  #yii-navbar-desctop {
+      display: none;
+  }
+  
+  .header-main-nav .main-nav-wrapper .main-menu ul li a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 20px 22px;
+    cursor: pointer;
+    }
+    
+  .nav li > form > button.logout {
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 21px 22px;
+    cursor: pointer;
+    }
+    
+  .profile .profile-title a.btn {
+    margin-left: 10px;
+ 
+    }
+
+}

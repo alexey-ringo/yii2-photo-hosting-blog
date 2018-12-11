@@ -50,8 +50,7 @@ Insta3Asset::register($this);
                     </div>
                 </div>
             </div>
-
-
+            
             <div class="header-main-nav">
                 <div class="container">
                     <div class="main-nav-wrapper">
@@ -79,6 +78,7 @@ Insta3Asset::register($this);
                                         . '</li>';
                             }
                             echo Nav::widget([
+                                'id' => 'yii-nav-mobile',
                                 'options' => ['class' => 'menu navbar-nav navbar-right'],
                                 'items' => $menuItems,
                             ]);
@@ -89,7 +89,49 @@ Insta3Asset::register($this);
                     </div>
                 </div>
             </div>
-            
+
+
+                            <?php
+                            NavBar::begin([
+                                'brandLabel' => Yii::$app->name,
+                                'brandUrl' => Yii::$app->homeUrl,
+                                'brandLabel' => '<img src="/img/favicon-32x32.png" class="img-responsive"/>InstaBlog',
+                                'options' => [
+                                    'class' => 'main-menu navbar-wrapper navbar-default',
+                                    'id' => 'yii-navbar-desctop',
+                                ],
+                            ]);
+                            
+                            $menuItems = [
+                                ['label' => 'Лента новостей', 'url' => ['/site/index']],
+                                ['label' => 'Популярные', 'url' => ['/popular/index']],
+    
+                            ];
+                            if (Yii::$app->user->isGuest) {
+                                $menuItems[] = ['label' => 'Зарегистрироваться', 'url' => ['/user/default/signup']];
+                                $menuItems[] = ['label' => 'Войти', 'url' => ['/user/default/login']];
+                            } else {
+                                $menuItems[] = ['label' => 'Мой профиль', 'url' => ['/user/profile/view', 'nickname' => Yii::$app->user->identity->getNickname()]];
+                                $menuItems[] = ['label' => 'Новый пост', 'url' => ['/post/default/create']];
+                                $menuItems[] = '<li>'
+                                        . Html::beginForm(['/user/default/logout'], 'post')
+                                        . Html::submitButton(
+                                                'Logout (' . Yii::$app->user->identity->username . ')<i class="fa fa-sign-out"></i>',
+                                                ['class' => 'btn btn-link logout']
+                                        )
+                                        . Html::endForm()
+                                        . '</li>';
+                            }
+                            echo Nav::widget([
+                                'id' => 'yii-nav-desctop',
+                                'options' => ['class' => 'menu navbar-nav navbar-right'],
+                                'items' => $menuItems,
+                            ]);
+                            
+                            NavBar::end();
+                            ?>
+                            
+
         </header>	
         <div class="container full">
             

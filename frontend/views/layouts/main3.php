@@ -52,43 +52,37 @@ Insta3Asset::register($this);
             </div>
 
 
-            <div class="header-main-nav">
+                    <!-- NAVIGATION -->
+        <div id="menu">
+            <nav class="navbar-wrapper navbar-default" role="navigation">
                 <div class="container">
-                    <div class="main-nav-wrapper">
-                        <nav class="main-menu">
-                            
-                            <?php
-                            $menuItems = [
-                                ['label' => 'Лента новостей', 'url' => ['/site/index']],
-                                ['label' => 'Популярные', 'url' => ['/popular/index']],
-    
-                            ];
-                            if (Yii::$app->user->isGuest) {
-                                $menuItems[] = ['label' => 'Зарегистрироваться', 'url' => ['/user/default/signup']];
-                                $menuItems[] = ['label' => 'Войти', 'url' => ['/user/default/login']];
-                            } else {
-                                $menuItems[] = ['label' => 'Мой профиль', 'url' => ['/user/profile/view', 'nickname' => Yii::$app->user->identity->getNickname()]];
-                                $menuItems[] = ['label' => 'Новый пост', 'url' => ['/post/default/create']];
-                                $menuItems[] = '<li>'
-                                        . Html::beginForm(['/user/default/logout'], 'post')
-                                        . Html::submitButton(
-                                                'Logout (' . Yii::$app->user->identity->username . ')<i class="fa fa-sign-out"></i>',
-                                                ['class' => 'btn btn-link logout']
-                                        )
-                                        . Html::endForm()
-                                        . '</li>';
-                            }
-                            echo Nav::widget([
-                                'options' => ['class' => 'menu navbar-nav navbar-right'],
-                                'items' => $menuItems,
-                            ]);
-                            ?>
-                            
-                            
-                        </nav>				
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--<a class="navbar-brand site-name" href="#top"><img src="images/logo2.png" alt="logo"></a>-->
+                    </div>
+
+                    <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="<?php  echo Url::to(['/site/index']); ?>">Лента новостей</a></li>
+                            <li><a href="<?php  echo Url::to(['/popular/index']); ?>">Популярные</a></li>
+                        <?php if (Yii::$app->user->isGuest): ?>
+                            <li><a href="<?php  echo Url::to(['/user/default/signup']); ?>">Зарегистрироваться</a></li>
+                            <li><a href="<?php  echo Url::to(['/user/default/login']); ?>">Войти</a></li>
+                        <?php else: ?>
+                            <li><a href="<?php  echo Url::to(['/user/profile/view', 'nickname' => Yii::$app->user->identity->getNickname()]); ?>">Мой профиль</a></li>
+                            <li><a href="<?php  echo Url::to(['/post/default/create']); ?>">Новый пост</a></li>
+                            <li><a href="<?php  echo Url::to(['/post/default/create']); ?>">Logout (<?php Yii::$app->user->identity->username; ?></a></li>
+                        <?php endif; ?>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
+        </div>
             
         </header>	
         <div class="container full">

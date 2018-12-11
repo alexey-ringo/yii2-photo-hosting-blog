@@ -14,6 +14,7 @@ class Insta3Asset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/main.css',
+        'css/responsive.css',
     ];
     public $js = [
         'js/scripts.js',
