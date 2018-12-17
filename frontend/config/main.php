@@ -45,6 +45,9 @@ return [
                 ],
             ],
         ],
+        'generateHtmlHelper' => [
+            'class' => 'frontend\components\helpers\GenerateHtmlHelper',
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

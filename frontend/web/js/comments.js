@@ -7,6 +7,9 @@ jQuery(document).ready(function ($) {
         event.preventDefault();
         var comment = $('#main-comment').val();
         var id = $('#main-comment').attr('data-id');
+        if(!comment) {
+            return false;
+        }
 		$.ajax({
  			url: '/post/default/create-comment',
  			data: {
@@ -16,20 +19,20 @@ jQuery(document).ready(function ($) {
  			type: 'POST',
  			success: function(res) {
  				if(!res) {
- 					//swal(nameProduct, "Ошибка добавления в корзину!", "error");
  					alert('Ошибка связи с сервером!');
  				}
+ 				/*
  				var result = $.parseJSON(res);
  				if(!result.success) {
  					alert('Ошибка добавления комментария!');
  				}
  				else {
- 				//	$('.js-show-cart').data('notify', result.productsCount).attr('data-notify', result.productsCount);
- 				//	console.log(result.productsCount);
- 					//swal(nameProduct, "добавлено в корзину!", "success");
+ 				//    if(result.comments.html) $('.comment-list').html(result.comments.html);
+ 				 $('.comment-list').html(result.comments);
  				}
- 						
- 					
+ 				*/
+ 				$('.comment-list').html(res);
+ 				$('#main-comment').val('');
  			},
  			error: function() {
  				alert('Error!');

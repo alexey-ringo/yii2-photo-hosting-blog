@@ -16,6 +16,8 @@ use yii\helpers\Html;
     
     <?php echo $form->field($model, 'picture')->fileInput(); ?>
     
+    <?php echo $form->field($model, 'hashtag'); ?>
+    
     <?php echo $form->field($model, 'description'); ?>
     
     <?php echo Html::submitButton('Применить'); ?>

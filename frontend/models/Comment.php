@@ -97,7 +97,12 @@ class Comment extends ActiveRecord
         return self::find()->where(['post_id' => $post_id])->all();
     }
     
+    
+    public function getComments() {
+       return self::find()->all();
+    }
+    
     public function getCommentsCount(/*int*/ $post_id) {
-        
+        return self::find()->where(['post_id' => $post_id])->count();
     }
 }

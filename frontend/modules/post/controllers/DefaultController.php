@@ -55,6 +55,7 @@ class DefaultController extends Controller
             'post' => $this->findPost($id),
             'currentUser' => $currentUser,
             'comments' => $comments->getCommentsByPost($id),
+            'commentsCount' => $comments->getCommentsCount($id),
             ]);
     }
     
@@ -123,12 +124,11 @@ class DefaultController extends Controller
     
     public function actionCreateComment() {
         if (Yii::$app->user->isGuest && !Yii::$app->request->isAjax && !Yii::$app->request->isPost) {
-            //return $this->redirect(['/user/default/login']);
             return false;
         }
         $ajaxData = Yii::$app->request->post();
         
-        Yii::$app->response->format = Response::FORMAT_JSON;
+        //Yii::$app->response->format = Response::FORMAT_JSON;
         
         $modelComment = new CommentForm(Yii::$app->user->identity/*, $ajaxData['post_id'], $ajaxData['text']*/);
         $comments = new Comment();
@@ -139,15 +139,7 @@ class DefaultController extends Controller
         //public function load($data, $formName = null)
         if($modelComment->load($ajaxData, '')) {
             if($modelComment->save()) {
-                //Yii::$app->session->setFlash('success', 'Комментарий создан');
-                //return $this->goHome();
-            
-            
-            
-            return [
-                'success' => true,
-                'comments' => $comments->getCommentsByPost($ajaxData['post_id']),
-            ];
+                return Yii::$app->generateHtmlHelper->getCommentsHtml($comments->getCommentsByPost($ajaxData['post_id']));
             }
         }
         return false;

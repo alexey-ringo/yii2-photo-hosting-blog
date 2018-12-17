@@ -4,6 +4,7 @@
 /* @var $post frontend\models\Post */
 /* @var $currentUser frontend\models\User */
 /* @var $comments frontend\models\Comment */
+/* @var $commentsCount frontend\models\Comment */
 /* @var $modelComment frontend\modules\post\models\forms\CommentForm */
 
 use yii\helpers\Url;
@@ -40,6 +41,9 @@ use yii\web\JqueryAsset;
                                     <img src="<?php echo $post->getImage(); ?>" alt="">
                                 </a>
                             </div>
+                            <div class="post-hashtag">
+                                <p><?php echo Html::encode($post->hashtag); ?></p>
+                            </div>
                             <div class="post-description">
                                 <p><?php echo Html::encode($post->description); ?></p>
                             </div>
@@ -64,11 +68,11 @@ use yii\web\JqueryAsset;
                                     <?php endif; ?>
                                 </div>
                                 <div class="post-comments">
-                                    <a href="#">5 comments</a>
+                                    <a href="#"><?php echo $commentsCount; ?> comments</a>
 
                                 </div>
                                 <div class="post-date">
-                                    <span>Jan 14, 2016</span>    
+                                    <span><?php echo Yii::$app->formatter->asDatetime($post->created_at); ?></span>    
                                 </div>
                                 <div class="post-report">
                                     <a href="#">Report post</a>    
@@ -81,7 +85,7 @@ use yii\web\JqueryAsset;
                     
                     
                     <div class="col-sm-12 col-xs-12">
-                        <h4>5 comments</h4>
+                        <h4><?php echo $commentsCount; ?> Comments</h4>
                         <div class="comments-post">
 
                             <div class="single-item-title"></div>
@@ -108,6 +112,7 @@ use yii\web\JqueryAsset;
                                     </li>
                                     <!-- comment item -->
                                     <?php endforeach; ?>
+                                    
                                 </ul>
                             </div>
                         </div>

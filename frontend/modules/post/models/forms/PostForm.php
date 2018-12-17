@@ -14,11 +14,13 @@ use frontend\models\events\PostCreatedEvent;
 class PostForm extends Model {
     
     const MAX_DESCRIPTION_LENGHT = 1000;
+    const MAX_HASHTAG_LENGHT = 50;
     //Событие публикации поста
     const EVENT_POST_CREATED = 'post_created';
     
     //Загрузили из формы методом Load
     public $picture;
+    public $hashtag;
     public $description;
     
     //Получили через Конструктор объект текущего пользователя (кто создает пост)
@@ -36,6 +38,7 @@ class PostForm extends Model {
                 'extensions' => ['jpg', 'png'],
                 'checkExtensionByMimeType' => true,
                 'maxSize' => $this->getMaxFileSize()],
+            [['hashtag'], 'string', 'max' => self::MAX_HASHTAG_LENGHT],
             [['description'], 'string', 'max' => self::MAX_DESCRIPTION_LENGHT],
             ];
     }
@@ -98,6 +101,7 @@ class PostForm extends Model {
             */
             
             $post = new Post();
+            $post->hashtag = $this->hashtag;
             $post->description = $this->description;
             //created_at заполняем в основной модели Post с помошью TimestampBehavior
             //$post->created_at = time();
@@ -132,6 +136,18 @@ class PostForm extends Model {
      */
     public function getMaxFileSize() {
         return Yii::$app->params['maxFileSize'];
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'picture' => 'Изображение',
+            'hashtag' => 'ХэшТэг',
+            'description' => 'Описание',
+        ];
     }
     
 } 
